@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j2-configuration>
+<Configuration shutdownHook="disable" status="INFO">
+  <Appenders>
+<!--
+    <console name="console" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %logger{36}.%M(%L) - %msg%n"/>
+    </console>
+    <console name="console" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+    </console>
+-->
+    <console name="console" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %logger{36}.%M(%L) - %msg%n" />
+    </console>
+<!--
+    <File name="file" fileName="all.log" immediateFlush="false" append="false">
+      <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+    </File>
+-->
+  </Appenders>
+  <Loggers>
+    <Root level="debug">
+      <AppenderRef ref="console"/>
+<!--
+      <AppenderRef ref="file"/>
+-->
+    </Root>
+<!--
+-->
+    <Logger name="org.jboss.weld" level="info" additivity="false">
+      <appender-ref ref="console" level="info"/>
+    </Logger>
+    <Logger name="de.jmda.app.uml.shape.type.TypeBoxAreaItem$ModifiersHBoxWidthSynchroniser" level="debug" additivity="false">
+      <appender-ref ref="console" level="info"/>
+    </Logger>
+  </Loggers>
+</Configuration>
