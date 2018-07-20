@@ -1,10 +1,11 @@
 package de.oc.xstaffr.client.fx;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class XStaffrAppRunner {
 	
-	final static Logger logger = Logger.getLogger(XStaffrAppRunner.class);
+	final static Logger logger = LogManager.getLogger(XStaffrAppRunner.class);
 	
 	public static void main(String[] args) { 
 		logger.debug("Hello world!");
