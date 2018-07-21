@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="5.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label text="projects" />
+      <TableView fx:id="tblVw" VBox.vgrow="ALWAYS" />
+      <HBox fx:id="hbx" spacing="5.0">
+         <children>
+            <Button fx:id="btnRemove" mnemonicParsing="false" text="remove" />
+            <Region prefWidth="200.0" HBox.hgrow="ALWAYS" />
+            <Label prefHeight="25.0" prefWidth="25.0" text="filter" />
+            <TextField fx:id="txtFldFilter" />
+         </children>
+      </HBox>
+      <TitledPane fx:id="ttldPnDetails" animated="false" text="project details">
+         <content>
+            <VBox>
+               <children>
+                  <HBox spacing="5.0">
+                     <children>
+                        <GridPane hgap="5.0" vgap="5.0" HBox.hgrow="ALWAYS">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="NEVER" />
+                            <ColumnConstraints hgrow="SOMETIMES" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints vgrow="SOMETIMES" />
+                            <RowConstraints vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="project name" GridPane.rowIndex="1">
+                                 <padding>
+                                    <Insets right="5.0" />
+                                 </padding></Label>
+                              <TextField fx:id="txtFldName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label text="customer name" />
+                              <ComboBox fx:id="cmbBxCustomer" GridPane.columnIndex="1" />
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" />
+                           </padding>
+                        </GridPane>
+                     </children>
+                  </HBox>
+                  <HBox spacing="5.0">
+                     <children>
+                        <Button fx:id="btnEdit" mnemonicParsing="false" text="edit" />
+                        <Button fx:id="btnUpdate" mnemonicParsing="false" text="update" />
+                        <Button fx:id="btnNew" mnemonicParsing="false" text="new" />
+                        <Button fx:id="btnCreate" mnemonicParsing="false" text="create" />
+                        <Button fx:id="btnCancel" mnemonicParsing="false" text="cancel" />
+                     </children>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </content>
+      </TitledPane>
+   </children>
+</VBox>

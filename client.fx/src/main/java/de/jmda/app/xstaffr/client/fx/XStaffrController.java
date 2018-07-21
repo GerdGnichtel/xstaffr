@@ -10,7 +10,6 @@ import org.apache.derby.jdbc.ClientDriver;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import de.jmda.app.xstaff.common.domain.test.DBUtils;
 import de.jmda.app.xstaffr.client.fx.edit.candidate.CandidateEditor;
 import de.jmda.app.xstaffr.client.fx.edit.customer.CustomerEditor;
 import de.jmda.app.xstaffr.client.fx.edit.project.ProjectEditor;
@@ -33,6 +32,7 @@ import de.jmda.app.xstaffr.client.fx.menu.MenuService.EditSuppliersEvent;
 import de.jmda.app.xstaffr.client.fx.menu.MenuService.ReportSearchRequestsEvent;
 import de.jmda.app.xstaffr.client.fx.report.SearchRequestReporter;
 import de.jmda.app.xstaffr.client.fx.settings.filter.FilterEditor;
+import de.jmda.app.xstaffr.common.domain.util.DBUtils;
 import de.jmda.core.cdi.event.ActionOnEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;

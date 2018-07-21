@@ -1,4 +1,4 @@
-package de.jmda.app.xstaff.common.domain.test;
+package de.jmda.app.xstaffr.common.domain.util;
 
 import java.io.File;
 import java.io.FileInputStream;

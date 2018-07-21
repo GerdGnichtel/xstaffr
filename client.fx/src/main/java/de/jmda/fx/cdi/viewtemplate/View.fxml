@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="vbxRoot" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox fx:id="hbxTop" VBox.vgrow="NEVER" />
+      <HBox fx:id="hbxCenter" VBox.vgrow="ALWAYS">
+         <children>
+            <Pane fx:id="pnLeft" />
+            <Pane fx:id="pnMain" HBox.hgrow="ALWAYS" />
+            <Pane fx:id="pnRight" />
+         </children>
+      </HBox>
+      <HBox fx:id="hbxBottom" VBox.vgrow="NEVER" />
+   </children>
+</VBox>

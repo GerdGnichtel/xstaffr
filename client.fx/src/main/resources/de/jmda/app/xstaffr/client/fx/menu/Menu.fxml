@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+
+<MenuBar fx:id="menubar" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+  <menus>
+      <Menu fx:id="mnEdit" mnemonicParsing="false" text="edit">
+        <items>
+          <MenuItem fx:id="mnItmEditCandidates" mnemonicParsing="false" text="candidates" />
+            <MenuItem fx:id="mnItmEditCustomers" mnemonicParsing="false" text="customers" />
+            <MenuItem fx:id="mnItmEditRequesters" mnemonicParsing="false" text="requesters" />
+            <MenuItem fx:id="mnItmEditSuppliers" mnemonicParsing="false" text="suppliers" />
+            <MenuItem fx:id="mnItmEditProjects" mnemonicParsing="false" text="projects" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem fx:id="mnItmEditBackup" mnemonicParsing="false" text="backup" />
+            <MenuItem fx:id="mnItmEditRestore" mnemonicParsing="false" text="restore" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem fx:id="mnItmExit" mnemonicParsing="false" text="exit" />
+        </items>
+      </Menu>
+      <Menu fx:id="mnReport" mnemonicParsing="false" text="report">
+        <items>
+          <MenuItem fx:id="mnItemReportSearchRequests" mnemonicParsing="false" text="search requests" />
+        </items>
+      </Menu>
+  </menus>
+</MenuBar>

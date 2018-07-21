@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="vbxRoot" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox fx:id="hbxTop" VBox.vgrow="NEVER" />
+      <HBox fx:id="hbxCenter" VBox.vgrow="ALWAYS">
+         <children>
+            <AnchorPane HBox.hgrow="ALWAYS">
+               <children>
+                  <TabPane tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                    <tabs>
+                      <Tab text="search requests">
+                        <content>
+                          <AnchorPane fx:id="nchrPnSearchRequests" minHeight="0.0" minWidth="0.0" />
+                        </content>
+                      </Tab>
+                      <Tab text="search results">
+                        <content>
+                          <AnchorPane fx:id="nchrPnSearchResults" minHeight="0.0" minWidth="0.0" />
+                        </content>
+                      </Tab>
+                        <Tab text="contracts">
+                          <content>
+                            <AnchorPane fx:id="nchrPnContracts" minHeight="0.0" minWidth="0.0" />
+                          </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <HBox fx:id="hbxBottom" VBox.vgrow="NEVER" />
+   </children>
+</VBox>

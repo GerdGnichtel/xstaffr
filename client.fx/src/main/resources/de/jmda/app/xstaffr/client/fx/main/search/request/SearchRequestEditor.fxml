@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TitledPane fx:id="ttldPnTable" text="search requests (bold characters: results present,)" VBox.vgrow="ALWAYS">
+         <content>
+            <VBox>
+               <children>
+                  <TableView fx:id="tblVw" VBox.vgrow="SOMETIMES" />
+                  <HBox fx:id="hbx" spacing="5.0">
+                     <children>
+                        <Button fx:id="btnRemove" mnemonicParsing="false" text="remove" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </content>
+      </TitledPane>
+      <TitledPane fx:id="ttldPnDetails" animated="false" text="search request details" VBox.vgrow="ALWAYS">
+         <content>
+            <VBox>
+               <children>
+                  <HBox spacing="5.0">
+                     <children>
+                        <GridPane hgap="5.0" vgap="5.0" HBox.hgrow="ALWAYS">
+                          <columnConstraints>
+                              <ColumnConstraints />
+                              <ColumnConstraints />
+                            <ColumnConstraints />
+                            <ColumnConstraints />
+                              <ColumnConstraints />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints vgrow="SOMETIMES" />
+                              <RowConstraints vgrow="SOMETIMES" />
+                              <RowConstraints vgrow="SOMETIMES" />
+                              <RowConstraints vgrow="SOMETIMES" />
+                              <RowConstraints vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="customer">
+                                 <padding>
+                                    <Insets right="5.0" />
+                                 </padding>
+                              </Label>
+                              <ComboBox fx:id="cmbBxCustomer" GridPane.columnIndex="1" />
+                              <Label text="project" GridPane.rowIndex="1">
+                                 <padding>
+                                    <Insets right="5.0" />
+                                 </padding>
+                              </Label>
+                              <ComboBox fx:id="cmbBxProject" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label text="requester" GridPane.rowIndex="2">
+                                 <padding>
+                                    <Insets right="5.0" />
+                                 </padding>
+                              </Label>
+                              <ComboBox fx:id="cmbBxRequester" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label text="request receipt date" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                 <padding>
+                                    <Insets right="5.0" />
+                                 </padding>
+                              </Label>
+                              <ComboBox fx:id="cmbBxState" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label text="rolename" GridPane.columnIndex="2">
+                                 <padding>
+                                    <Insets right="5.0" />
+                                 </padding>
+                              </Label>
+                              <TextField fx:id="txtFldRoleName" GridPane.columnIndex="3" />
+                              <Label text="hourly rate selling" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <padding>
+                                    <Insets right="5.0" />
+                                 </padding>
+                              </Label>
+                              <TextField fx:id="txtFldHourlyRate" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                              <Label text="request period start" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                 <padding>
+                                    <Insets right="5.0" />
+                                 </padding>
+                              </Label>
+                              <Label text="request period end" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                 <padding>
+                                    <Insets right="5.0" />
+                                 </padding>
+                              </Label>
+                              <DatePicker fx:id="dtPckrRequestReceiptDate" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                              <DatePicker fx:id="dtPckrPeriodStartDate" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                              <DatePicker fx:id="dtPckrPeriodEndDate" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                              <TextArea fx:id="txtAreaText" GridPane.columnIndex="4" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.rowSpan="2147483647" />
+                              <Label layoutX="226.0" layoutY="249.0" text="text" GridPane.columnIndex="4">
+                                 <padding>
+                                    <Insets right="5.0" />
+                                 </padding>
+                              </Label>
+                              <Label text="state" GridPane.rowIndex="3">
+                                 <padding>
+                                    <Insets right="5.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" />
+                           </padding>
+                        </GridPane>
+                     </children>
+                  </HBox>
+                  <HBox spacing="5.0">
+                     <children>
+                        <Button fx:id="btnEdit" mnemonicParsing="false" text="edit" />
+                        <Button fx:id="btnUpdate" mnemonicParsing="false" text="update" />
+                        <Button fx:id="btnNew" mnemonicParsing="false" text="new" />
+                        <Button fx:id="btnCreate" mnemonicParsing="false" text="create" />
+                        <Button fx:id="btnCancel" mnemonicParsing="false" text="cancel" />
+                        <Button fx:id="btnFilter" mnemonicParsing="false" text="filter" />
+                     </children>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </content>
+      </TitledPane>
+   </children>
+</VBox>

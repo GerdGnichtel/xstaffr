@@ -1,6 +1,5 @@
 package de.jmda.app.xstaffr.client.fx;
 
-import java.io.IOException;
 import java.util.Optional;
 
 import javax.enterprise.inject.spi.CDI;
@@ -8,10 +7,8 @@ import javax.enterprise.inject.spi.CDI;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import de.jmda.app.xstaff.common.domain.test.DBUtils;
 import de.jmda.app.xstaffr.common.service.jpa.util.Populator;
 import de.jmda.app.xstaffr.common.service.jpa.util.PopulatorCommon;
-import de.jmda.core.util.io.IOUtil;
 import de.jmda.fx.cdi.FXApp;
 import de.jmda.fx.cdi.FXView;
 import javafx.beans.value.ChangeListener;
