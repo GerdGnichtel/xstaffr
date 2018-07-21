@@ -1,0 +1,77 @@
+package de.jmda.app.xstaffr.common.service;
+
+import java.util.Set;
+
+import de.jmda.app.xstaffr.common.domain.Candidate;
+import de.jmda.app.xstaffr.common.domain.Contract;
+import de.jmda.app.xstaffr.common.domain.Customer;
+import de.jmda.app.xstaffr.common.domain.Project;
+import de.jmda.app.xstaffr.common.domain.Requester;
+import de.jmda.app.xstaffr.common.domain.SearchRequest;
+import de.jmda.app.xstaffr.common.domain.SearchResult;
+import de.jmda.app.xstaffr.common.domain.Supplier;
+
+public interface XStaffrService
+{
+	String ping(String in);
+	void persistCandidate(Candidate entity);
+	void persistCustomer(Customer entity);
+	void persistRequester(Requester entity);
+	void persistSupplier(Supplier entity);
+	void persistProject(Project entity);
+	void persistSearchRequest(SearchRequest entity);
+	void persistSearchResult(SearchResult entity);
+	void persistContract(Contract entity);
+	Candidate updateCandidate(Candidate entity);
+	Customer updateCustomer(Customer entity);
+	Requester updateRequester(Requester entity);
+	Supplier updateSupplier(Supplier entity);
+	Project updateProject(Project entity);
+	SearchRequest updateSearchRequest(SearchRequest entity);
+	SearchResult updateSearchResult(SearchResult entity);
+	Contract updateContract(Contract entity);
+	Candidate findCandidateById(Long id);
+	Customer findCustomerById(Long id);
+	Requester findRequesterById(Long id);
+	Supplier findSupplierById(Long id);
+	Project findProjectById(Long id);
+	SearchRequest findSearchRequestById(Long id);
+	SearchResult findSearchResultById(Long id);;
+	Contract findContractById(Long id);;
+	void deleteCandidate(Candidate entity);
+	void deleteCustomer(Customer entity);
+	void deleteRequester(Requester entity);
+	void deleteSupplier(Supplier entity);
+	void deleteProject(Project entity);
+	void deleteSearchRequest(SearchRequest entity);
+	void deleteSearchResult(SearchResult entity);
+	void deleteContract(Contract entity);
+	int deleteCandidates();
+	int deleteCustomers();
+	int deleteRequesters();
+	int deleteSuppliers();
+	int deleteProjects();
+	int deleteSearchRequests();
+	int deleteSearchResults();
+	int deleteContracts();
+	Long numberOfCandidates();
+	Long numberOfCustomers();
+	Long numberOfRequesters();
+	Long numberOfSuppliers();
+	Long numberOfProjects();
+	Long numberOfSearchRequests();
+	Long numberOfSearchResults();
+	Long numberOfContracts();
+	Set<Candidate> candidates();
+	Set<Customer> customers();
+	Set<Requester> requesters();
+	Set<Supplier> suppliers();
+	Set<Project> projects();
+	Set<SearchRequest> searchRequests();
+	Set<SearchResult> searchResults();
+	Set<SearchResult> searchResultsWithContracts();
+	Set<Contract> contracts();
+	Customer findCustomerByName(String name);
+	Customer findCustomerByNameWithProjects(String name);
+	int unpopulate();
+}
